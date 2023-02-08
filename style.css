@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #05203E;
+    --accent-color: #03C988;
+    --accent-color2: #BDCAD8;
+}
+
+html {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 24px;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 60px 60px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    color: var(--accent-color2);
+    font-size: calc(1rem - 3px);
+    margin-left: 1rem;
+}
+
+.nav-number {
+    color: var(--accent-color);
+}
+
+.btn {
+    background-color: transparent;
+    filter: drop-shadow(9px 9px 12px rgba(0, 0, 0, 0.25));
+    border: 6px solid #03C988;
+    border-radius: 15px 0px;
+
+    color: var(--accent-color);
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 1rem;
+
+    width: 210px;
+    height: 60px;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    appearance: none;
+    background-image: url("images/menu-icon.png");
+    background-size: contain;
+    background-color: inherit;
+    background-repeat: no-repeat;
+    width: 51px;
+    height: 39px;
+}
+
+@media (max-width: 1200px) {
+    .nav-list, .nav-button {
+        display: none;
+    }
+
+    .menu-btn {
+        display: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        margin: 30px 30px;
+    }
+}
