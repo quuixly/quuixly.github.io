@@ -147,15 +147,6 @@ main {
     margin-top: 40px;
 }
 
-.main-middle-center-text-container p {
-    color: #70C7EE;
-}
-
-.main-middle-center-text-container h1 {
-    font-size: 96px;
-    color: #03C988;
-}
-
 .main-middle-container > h1 {
     color: #BDCAD8;
     text-align: center;
@@ -165,6 +156,15 @@ main {
     color: #8892B0;
     max-width: 500px;
     text-align: center;
+}
+
+.main-middle-welcome-text-container p {
+    color: #70C7EE;
+}
+
+.main-middle-welcome-text-container h1 {
+    font-size: 96px;
+    color: #03C988;
 }
 
 .main-middle-arrow-down {
@@ -190,7 +190,7 @@ main {
     align-self: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1244px) {
     .nav-list, .nav_btn {
         display: none;
     }
@@ -198,10 +198,112 @@ main {
     .menu-btn {
         display: unset;
     }
+
+    main {
+        margin: 0 80px;
+    }
+
+    .main-left-container {
+        justify-content: center;
+    }
+
+    .main-right-container {
+        justify-content: center;
+    }
+
+    .main-right-box1, .main-right-box3 {
+        display: none;
+    }
+
+    .main-left-box1, .main-left-box3 {
+        display: none;
+    }
+
+    .main-middle-container > h1 {
+        font-size: 30px;
+        max-width: 90%;
+    }
+    
+    .main-middle-container > p {
+        font-size: 15px;
+        max-width: 80%;
+    }
+
+    .main-middle-arrow-down {
+        display: none;
+    }
+
+    .main-middle-welcome-text-container p {
+        font-size: 15px;
+    }
+    
+    .main-middle-welcome-text-container h1 {
+        font-size: 64px;
+        color: #03C988;
+    }
+
+    .social-nav {
+        left: 70px;
+    }
+}
+
+@media (max-width: 650px) {
+    .social-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        padding: 0 30px;
+    }
+
+    main {
+        margin: 0 30px;
+    }
 }
 
 @media (max-width: 480px) {
-    header {
-        margin: 30px 30px;
+    .btn-filled {
+        height: 36px;
+        width: 120px;
+        font-size: 15px;
+    }
+
+    .main-middle-container {
+        gap: 10px;
+    }
+
+    .main-middle-container > .btn-filled {
+        margin-top: 20px;
+    }
+
+    .main-middle-container > h1 {
+        font-size: 24px;
+        max-width: 90%;
+    }
+    
+    .main-middle-container > p {
+        font-size: 12px;
+        max-width: 80%;
+    }
+
+    .main-middle-welcome-text-container p {
+        font-size: 12px;
+    }
+    
+    .main-middle-welcome-text-container h1 {
+        font-size: 48px;
+        color: #03C988;
+    }
+}
+
+@media (max-width: 350px) {
+    .main-left-container {
+        display: none;
+    }
+
+    .main-right-container {
+        display: none;
     }
 }
