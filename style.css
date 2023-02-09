@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600&display=swap');
 
+@keyframes levitate {
+    0% {
+        transform: translate(0, -10px);
+    }
+
+    75% {
+        transform: translate(0, 10px);
+    }
+
+    100% {
+        transform: translate(0, -10px);
+    }
+}
+
 *,
 *::before,
 *::after {
@@ -60,6 +74,23 @@ main {
 
     width: 210px;
     height: 60px;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #03C988;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    transition: all 0.3s;
+}
+
+.btn:hover::before {
+    width: 100%;
 }
 
 .btn-filled {
@@ -75,6 +106,17 @@ main {
 
     width: 210px;
     height: 60px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-filled:hover {
+    transform: translate(0, -6px);
+}
+
+.btn-filled:active {
+    transform: scale(0.9);
 }
 
 .menu-btn {
@@ -98,6 +140,12 @@ main {
     color: var(--accent-color2);
     font-size: calc(1rem - 3px);
     margin-left: 1rem;
+    transition: 0.3s;
+}
+
+.nav-list-item:hover {
+    transform: translate(0, -6px);
+    cursor: pointer;
 }
 
 .nav-list-item-number {
@@ -168,6 +216,7 @@ main {
 }
 
 .main-middle-arrow-down {
+    animation: levitate 1.2s infinite;
     position: fixed;
     bottom: 30px;
 }
